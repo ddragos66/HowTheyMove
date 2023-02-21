@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.howtheymove.databinding.ActivityMainBinding;
 import com.google.ar.core.ArCoreApk;
 import com.google.ar.core.Config;
 import com.google.ar.core.Session;
@@ -30,12 +31,8 @@ import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationExceptio
 
 public class MainActivity extends AppCompatActivity {
     public static final int CAMERA_REQUEST_CODE = 102;
-    private Button buttonAr;
-
-    private Button deffbtn;
-
+    ActivityMainBinding binding;
     private boolean mUserRequestedInstall = true;
-
     private int CAMERA_CODE = 1;
     //private Object session = null;
 
@@ -43,13 +40,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        buttonAr = (Button) findViewById(R.id.arbtn);
-        deffbtn = (Button) findViewById(R.id.deffbtn);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
 
         maybeEnableArButton();
 
-        buttonAr.setOnClickListener(new View.OnClickListener() {
+        binding.arbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
@@ -62,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        deffbtn.setOnClickListener(new View.OnClickListener() {
+        binding.deffbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {openDefinitiiSiExpicatii();}
         });
@@ -126,12 +123,12 @@ public class MainActivity extends AppCompatActivity {
             }, 200);
         }
         if (availability.isSupported()) {
-            buttonAr.setVisibility(View.VISIBLE);
-            buttonAr.setEnabled(true);
+            binding.arbtn.setVisibility(View.VISIBLE);
+            binding.arbtn.setEnabled(true);
             Log.d("Success: ", "Ar supported");
         } else { // The device is unsupported or unknown.
-            buttonAr.setVisibility(View.INVISIBLE);
-            buttonAr.setEnabled(false);
+            binding.arbtn.setVisibility(View.INVISIBLE);
+            binding.arbtn.setEnabled(false);
             Log.d("Success: ", "Ar not supported");
         }
     }
