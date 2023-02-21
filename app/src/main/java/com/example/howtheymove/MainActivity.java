@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openDefinitiiSiExpicatii(){
-        Intent intent = new Intent(this, Definitii.class);
+        Intent intent = new Intent(this, EnergyList.class);
         startActivity(intent);
     }
 
