@@ -39,7 +39,7 @@ public class CustomeBaseAdaptor extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = inflater.inflate(R.layout.activity_custom_list, null);
+        convertView = inflater.inflate(R.layout.activity_energy_list_element, null);
         TextView textView = (TextView) convertView.findViewById(R.id.title);
         ImageView iconImg = (ImageView)  convertView.findViewById(R.id.imageView);
         textView.setText(listIcon[position]);

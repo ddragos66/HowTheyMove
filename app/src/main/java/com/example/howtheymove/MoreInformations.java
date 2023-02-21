@@ -22,7 +22,7 @@ public class MoreInformations extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_definitii);
+        setContentView(R.layout.activity_energy_list);
 
         binding = ActivityMoreInformationsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -40,7 +40,6 @@ public class MoreInformations extends AppCompatActivity {
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if (task.getResult().exists()){
 
-                    Toast.makeText(MoreInformations.this, "Energy found.", Toast.LENGTH_SHORT).show();
                     DataSnapshot dataSnapshot = task.getResult();
 
                     String title = String.valueOf(dataSnapshot.child("title").getValue());
