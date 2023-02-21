@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "443756273451",
+    "project_id": "how-they-move",
+    "storage_bucket": "how-they-move.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443756273451:android:10a25e1e92f2a1c1eb6f6e",
+        "android_client_info": {
+          "package_name": "com.example.howtheymove"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443756273451-q2s7ei2rggo6t7is6clubr48ch0mrvuc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.howtheymove",
+            "certificate_hash": "a4a3444f3b2c5333e2b63ad86039049c5c01e77c"
+          }
+        },
+        {
+          "client_id": "443756273451-7u2lls825mgpq30t2tji23v3vlkt8tbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLARwx4PMuqrXT-PVtAAZJ99UzJuT4ZoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443756273451-7u2lls825mgpq30t2tji23v3vlkt8tbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

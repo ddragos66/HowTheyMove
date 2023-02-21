@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".act1">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10sp"
+        android:text="Kinetic Energy"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/light_font"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="4"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/subTitle"
+        android:layout_below="@+id/title"
+        android:text="Definition:"
+        android:textSize="17sp"
+        android:paddingTop="10sp"
+        android:paddingLeft="10sp"
+        android:background="@color/white"
+        android:layout_marginTop="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/light_font"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="4"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subTitle"
+        android:text="Kinetic energy is the energy an object has because of its motion. If we want to accelerate an object, then we must apply a force. Applying a force requires us to do work. After work has been done, energy has been transferred to the object, and the object will be moving with a new constant speed."
+        android:padding="10sp"
+        android:textSize="17dp"
+        android:background="@color/white"
+        android:textStyle="bold"
+        android:textColor="@color/light_font"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="4"
+        />
+
+
+</RelativeLayout>
