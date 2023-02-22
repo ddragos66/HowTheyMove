@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
 //    public void createSession() throws UnavailableDeviceNotCompatibleException, UnavailableSdkTooOldException, UnavailableArcoreNotInstalledException, UnavailableApkTooOldException {
 //        // Create a new ARCore session.
 //        Session session;
-//        session = new Session(this);
+//        session = new Session(this);s
 //        Log.d("DEBUG------->", "NEW SESION STARTED");
 //
 //        // Create a session config.
