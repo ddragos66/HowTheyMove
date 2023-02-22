@@ -4,10 +4,11 @@
 
     <uses-feature
         android:glEsVersion="0x00030000"
-        android:required="true" />
-    <!-- Permissions -->
+        android:required="true" /> <!-- Permissions -->
     <uses-feature android:name="android.hardware.camera.ar" />
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -20,19 +21,16 @@
         android:theme="@style/Theme.HowTheyMove"
         tools:targetApi="31">
         <activity
-            android:name=".act2"
+            android:name=".EnergyListElement"
             android:exported="false" />
         <activity
-            android:name=".act1"
+            android:name=".EnergyList"
             android:exported="false" />
         <activity
-            android:name=".InDepthDefinitions"
+            android:name=".MoreInformations"
             android:exported="false" />
         <activity
             android:name=".Custom_List"
-            android:exported="false" />
-        <activity
-            android:name=".Definitii"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
