@@ -37,7 +37,6 @@ public class EnergyList extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Log.i("CUSTOM_LIST_VIEW", "Ite is clicked @ position  :: " + position);
 
-                //readData(position);
                 Intent intent = new Intent(EnergyList.this, MoreInformations.class);
 
                 String des = "some string";
