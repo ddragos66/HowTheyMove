@@ -2,8 +2,8 @@ package com.example.howtheymove;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -26,6 +26,13 @@ public class MoreInformations extends AppCompatActivity {
 
         binding = ActivityMoreInformationsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        //start OF ANIMATED BACKGROUND
+        AnimationDrawable animationDrawable = (AnimationDrawable) binding.infoLayoutAnimation.getBackground();
+        animationDrawable.setEnterFadeDuration(2500);
+        animationDrawable.setExitFadeDuration(5000);
+        animationDrawable.start();
+        //END OF ANIMATED BACKGROUND
 
         Intent callerIntent = getIntent();
         Bundle packageCaller=callerIntent.getBundleExtra("myPackage");

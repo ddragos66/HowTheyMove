@@ -4,19 +4,27 @@ import androidx.activity.result.contract.ActivityResultContract;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.howtheymove.databinding.ActivityMainBinding;
@@ -43,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        //start OF ANIMATED BACKGROUND
+        AnimationDrawable animationDrawable = (AnimationDrawable) binding.rootLayoutAnimation.getBackground();;
+        animationDrawable.setEnterFadeDuration(2500);
+        animationDrawable.setExitFadeDuration(5000);
+        animationDrawable.start();
+        //END OF ANIMATED BACKGROUND
 
         maybeEnableArButton();
 
@@ -61,11 +75,11 @@ public class MainActivity extends AppCompatActivity {
 
         binding.deffbtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {openDefinitiiSiExpicatii();}
+            public void onClick(View view) {openEnergyList();}
         });
     }
 
-    public void openDefinitiiSiExpicatii(){
+    public void openEnergyList(){
         Intent intent = new Intent(this, EnergyList.class);
         startActivity(intent);
     }
