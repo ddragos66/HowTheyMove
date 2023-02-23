@@ -30,9 +30,6 @@
             android:name=".MoreInformations"
             android:exported="false" />
         <activity
-            android:name=".Custom_List"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
