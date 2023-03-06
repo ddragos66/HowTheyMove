@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.AdapterView;
 import com.example.howtheymove.databinding.ActivityEnergyListBinding;
 
@@ -15,7 +16,6 @@ public class EnergyList extends AppCompatActivity {
     public ActivityEnergyListBinding binding;
     String listIcon[] = {"Kinetic Energy", "Potential Energy"};
     int listImage [] = {R.drawable.kineticenergy, R.drawable.potentialenergy};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
