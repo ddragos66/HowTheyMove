@@ -3,38 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".EnergyListElement">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="25dp"
+    android:layout_marginTop="25dp"
+    android:layout_marginEnd="25dp"
+    android:background="@drawable/button_shadow_ar"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".EnergyListElement"
+    tools:ignore="MissingConstraints">
 
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:id="@+id/imageView"
-        android:scaleType="centerCrop"
-        android:elevation="10dp"
-        android:layout_marginVertical="10sp"
-        android:layout_marginHorizontal="10sp"
-        />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="5sp"
-        android:gravity="center"
-        android:layout_marginHorizontal="20sp"
-        android:layout_marginVertical="30sp"
-        android:paddingTop="5dp"
-        android:padding="5dp"
-        android:text=""
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:shadowColor="@color/black"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="4"
-        />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="10sp"
+            android:layout_marginVertical="10sp"
+            android:elevation="10dp"
+            android:scaleType="centerCrop" />
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            android:layout_marginVertical="30sp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:paddingLeft="5sp"
+            android:paddingTop="5dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 </LinearLayout>
