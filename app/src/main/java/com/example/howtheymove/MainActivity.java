@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
         //start OF ANIMATED BACKGROUND
         AnimationDrawable animationDrawable = (AnimationDrawable) binding.rootLayoutAnimation.getBackground();;
         animationDrawable.setEnterFadeDuration(2500);
@@ -64,8 +65,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-                    Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(cameraIntent, CAMERA_REQUEST_CODE);
+
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, new CameraFragment())
+                            .addToBackStack(null)  // Optional: Add fragment to back stack
+                            .commit();
+
+                    //Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    //startActivityForResult(cameraIntent, CAMERA_REQUEST_CODE);
                 } else {
                     requestCameraPermission();
                 }
@@ -147,24 +154,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-//    public void createSession() throws UnavailableDeviceNotCompatibleException, UnavailableSdkTooOldException, UnavailableArcoreNotInstalledException, UnavailableApkTooOldException {
-//        // Create a new ARCore session.
-//        Session session;
-//        session = new Session(this);s
-//        Log.d("DEBUG------->", "NEW SESION STARTED");
-//
-//        // Create a session config.
-//        Config config = new Config((Session) session);
-//
-//
-//        // Do feature-specific operations here, such as enabling depth or turning on
-//        // support for Augmented Faces.
-//
-//        config.setInstantPlacementMode(Config.InstantPlacementMode.LOCAL_Y_UP);
-//
-//        // Configure the session.
-//        session.configure(config);
-//    }
+    public void createSession() throws UnavailableDeviceNotCompatibleException, UnavailableSdkTooOldException, UnavailableArcoreNotInstalledException, UnavailableApkTooOldException {
+        // Create a new ARCore session.
+        Session session;
+        session = new Session(this);
+        Log.d("DEBUG------->", "NEW SESION STARTED");
+
+        // Create a session config.
+        Config config = new Config((Session) session);
+
+
+        // Do feature-specific operations here, such as enabling depth or turning on
+        // support for Augmented Faces.
+
+        config.setInstantPlacementMode(Config.InstantPlacementMode.LOCAL_Y_UP);
+
+        // Configure the session.
+        session.configure(config);
+    }
 
     @Override
     protected void onResume() {
