@@ -50,11 +50,29 @@ public class CameraFragment extends Fragment {
     public void onResume() {
         super.onResume();
         try {
-            startCamera();//Different
+            startCamera();
+            if (getActivity() instanceof MainActivity) {
+                MainActivity mainActivity = (MainActivity) getActivity();
+                mainActivity.binding.deffbtn.setEnabled(false);
+                mainActivity.binding.arbtn.setEnabled(false);
+            }
         } catch (CameraAccessException e) {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        // Enable buttons
+        if (getActivity() instanceof MainActivity) {
+            MainActivity mainActivity = (MainActivity) getActivity();
+            mainActivity.binding.deffbtn.setEnabled(true);
+            mainActivity.binding.arbtn.setEnabled(true);
+        }
+    }
+
 
 //    private void CameraInitialized(){
 //        //Camera initialization is done here:
