@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
 import android.widget.AdapterView;
 import com.example.howtheymove.databinding.ActivityEnergyListBinding;
 
